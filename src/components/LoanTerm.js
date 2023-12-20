@@ -12,6 +12,7 @@ function LoanTerm({ value, onChange }) {
           value={value}
           onChange={onChange}
           required
+          data-testid="loan-term-input"
         />
       </label>
     </>

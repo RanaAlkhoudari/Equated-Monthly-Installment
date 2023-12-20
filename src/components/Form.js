@@ -17,9 +17,11 @@ function Form() {
   function handleLoanValueChange(e) {
     const inputValue = e.target.value;
     setLoanValue(inputValue);
-
     // Check if the input is a positive number
-    if (!/^\d*\.?\d+$/.test(inputValue) || parseFloat(inputValue) <= 0) {
+    if (
+      (!/^\d*\.?\d+$/.test(inputValue) || parseFloat(inputValue) <= 0) &&
+      e.target.value
+    ) {
       setError("Please enter a positive loan value number.");
     } else {
       setError("");
@@ -29,21 +31,20 @@ function Form() {
   function handleInterestRateChange(e) {
     const inputValue = e.target.value;
     setInterestRate(inputValue);
-    validateInputLength(inputValue, setError, 100);
+    validateInputLength(e, inputValue, setError, 100);
   }
 
   function handleLoanTermChange(e) {
     const inputValue = e.target.value;
     setLoanTerm(inputValue);
-    validateInputLength(inputValue, setError, 30);
+    validateInputLength(e, inputValue, setError, 30);
   }
 
   function handleEmailAddressChange(e) {
     const inputEmail = e.target.value;
     setEmail(inputEmail);
-
     // Check if the input is a valid email address
-    if (!isEmailValid(inputEmail)) {
+    if (!isEmailValid(inputEmail) && e.target.value) {
       setError("Please enter a valid email address.");
     } else {
       setError("");
@@ -51,7 +52,8 @@ function Form() {
   }
 
   const url = "http://localhost:8001/calculateEmi";
-  async function calculateEMI() {
+
+  async function calculateEmi() {
     try {
       const response = await fetch(url, {
         method: "POST",
@@ -67,7 +69,6 @@ function Form() {
       });
 
       const data = await response.json();
-
       if (response.ok) {
         setEmi(data.emi);
         setError("");
@@ -87,9 +88,7 @@ function Form() {
       <LoanTerm value={loanTerm} onChange={handleLoanTermChange} />
       <EmailAddress value={email} onChange={handleEmailAddressChange} />
       {error && <p className="error-msg">{error}</p>}
-
-      <button onClick={calculateEMI}>Calculate EMI</button>
-
+      <button onClick={calculateEmi}>Calculate EMI</button>
       {
         <p>
           Equated Monthly Installment

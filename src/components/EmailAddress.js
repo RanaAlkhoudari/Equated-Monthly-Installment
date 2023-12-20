@@ -5,7 +5,13 @@ function EmailAddress({ value, onChange }) {
     <>
       <label>
         Email Address:
-        <input type="email" value={value} onChange={onChange} required />
+        <input
+          type="email"
+          value={value}
+          onChange={onChange}
+          required
+          data-testid="email-address-input"
+        />
       </label>
     </>
   );

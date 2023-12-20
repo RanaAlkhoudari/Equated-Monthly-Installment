@@ -12,6 +12,7 @@ function InterestRate({ value, onChange }) {
           value={value}
           onChange={onChange}
           required
+          data-testid="interest-rate-input"
         />
       </label>
     </>

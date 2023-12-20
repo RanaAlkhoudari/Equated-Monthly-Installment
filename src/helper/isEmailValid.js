@@ -1,5 +1,5 @@
 /**
- *
+ * Check if the email address is valid
  * @param {string} email
  * @returns boolean
  */
