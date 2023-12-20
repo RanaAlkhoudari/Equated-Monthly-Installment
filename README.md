@@ -86,7 +86,9 @@ To get started you need:
 
 - express: back end web application framework for Node.js
 
-- MongoMemoryServer: Spins up an actual/real MongoDB server programmatically from within nodejs
+- MongoMemoryServer: spins up an actual/real MongoDB server programmatically from within nodejs
+  
+- React: library for web and native user interfaces
 
 - Jest: JavaScript Testing Framework
 
