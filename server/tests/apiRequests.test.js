@@ -21,7 +21,7 @@ describe("Get emi", () => {
 
   test("Should respond with a 200 status code & return emi", async () => {
     //Create emi entity first to be saved in-memory db
-    await request.post("/").send(body);
+    await request.post("/calculateEmi").send(body);
     const res = await request.get("/calculateEmi");
     expect(res.statusCode).toBe(200);
     expect(res.body[0].emi).toBe(emi);
