@@ -4,23 +4,23 @@
 
 To get started you need:
 
-Clone the repository
+-Clone the repository
 
-Checkout to the master branch
+-Checkout to the master branch
 
-Install the dependencies: ```npm install```
+-Install the dependencies: ```npm install```
 
-Create a .env file in the root and add the port, make sure that the variable starts with ```REACT```, an example: ```REACT_APP_PORT```
+-Create a .env file in the root and add the port, make sure that the variable starts with ```REACT```, an example: ```REACT_APP_PORT```
 
-Create another .env file inside the server folder and add the port like ```PORT```
+-Create another .env file inside the server folder and add the port like ```PORT```
 
-Run ```npm start``` to start the React application 
+-Run ```npm start``` to start the React application 
 
-Note: Make sure to update node to a new version, preferably to 20.10.0
+# Note: Make sure to update node to a new version, preferably to 20.10.0
 
-Change directory to server and run ```nodemon server.js``` for live server or ```node.server.js```
+-Change directory to server and run ```nodemon server.js``` for live server or ```node.server.js```
 
-To run the tests, inside the server folder run ```npm test```
+-To run the tests, inside the server folder run ```npm test```
 
 ## Structure
 
@@ -100,7 +100,7 @@ To run the tests, inside the server folder run ```npm test```
 #### STRUCTURE
 
 | Field | Type | Required | 
-| --- | --- | --- |  --- | --- |
+| --- | --- | --- |
 | loanValue | number | yes |  
 | interestRate | number | yes |
 | loanTerm| number | yes |
