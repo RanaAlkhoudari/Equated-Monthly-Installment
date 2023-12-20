@@ -1,14 +1,14 @@
 const EmiModel = require("../models/emi");
 
 /**
- ** This method uses two parameters the request and the response and will either return a 200, 404 or 500 status response to the user.
+ ** This method uses two parameters the request and the response and will either return a 200, 404 or 500 status response.
  * - 404: if there aren't records in EmiModel
  * - 200: if there are records in EmiModel
  * - 500: if an unexpected error occurs
  *
  * @param {object} req
  * @param {object} res
- * @returns
+ * @returns emiModel
  */
 async function getEmi(req, res) {
   try {
@@ -22,7 +22,7 @@ async function getEmi(req, res) {
       return res.status(200).send(emiModel);
     }
   } catch (error) {
-    res.json({ error });
+    res.status(500).send(`An error occurred: ${error}`);
   }
 }
 

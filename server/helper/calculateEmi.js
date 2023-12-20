@@ -3,7 +3,7 @@
  * @param {number} loanValue
  * @param {number} interestRate
  * @param {number} loanTerm
- * @returns string
+ * @returns string (toFixed() converts number to string)
  */
 function calculateEmi(loanValue, interestRate, loanTerm) {
   const monthlyInterestRate = interestRate / 12 / 100;

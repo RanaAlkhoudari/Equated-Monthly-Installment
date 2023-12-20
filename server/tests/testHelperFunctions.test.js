@@ -1,12 +1,12 @@
-const calculateEmi = require("../helpers/calculateEmi");
+const calculateEmi = require("../helper/calculateEmi");
 const {
   isValidLoanValue,
   isValidInterestRate,
   isValidLoanTerm,
   isValidEmail,
-} = require("../helpers/validateInputs");
+} = require("../helper/validateInputs");
 
-describe("calculate emi", () => {
+describe("Calculate emi", () => {
   const emi = "1.88";
   test("CalculateEmi function should return the same emi value", async () => {
     expect(calculateEmi(100, 20, 11)).toBe(emi);

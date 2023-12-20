@@ -1,5 +1,5 @@
 /**
- *
+ * Check if the loan term is valid
  * @param {number} value
  * @returns boolean
  */
@@ -8,7 +8,7 @@ function isValidLoanTerm(value) {
 }
 
 /**
- *
+ * Check if the loan value is valid
  * @param {number} value
  * @returns boolean
  */
@@ -17,7 +17,7 @@ function isValidLoanValue(value) {
 }
 
 /**
- *
+ * Check if the interest rate is valid
  * @param {number} value
  * @returns boolean
  */
@@ -27,7 +27,7 @@ function isValidInterestRate(value) {
 }
 
 /**
- *
+ * Check if the email address is valid
  * @param {string} email
  * @returns boolean
  */
