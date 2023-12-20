@@ -16,7 +16,7 @@ To get started you need:
 
 -Run ```npm start``` to start the React application 
 
-# Note: Make sure to update node to a new version, preferably to 20.10.0
+### Note: Make sure to update node to a new version, preferably to 20.10.0
 
 -Change directory to server and run ```nodemon server.js``` for live server or ```node.server.js```
 
