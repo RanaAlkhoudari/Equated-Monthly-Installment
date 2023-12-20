@@ -109,13 +109,13 @@ To get started you need to:
 | email | string | yes |
 | emi | string | no |
 
- ## Possible error codes and messages
+ ## Status codes
  
 | Statuscode | Statusmessage | Description 
 | --- | --- | --- | 
 | 200 | Ok | Everything proceeded according to the specifications
 | 201 | Created | The request has been fulfilled 
-| 400 | Bad Request | Input values are invalid
+| 400 | Bad Request | Input values are invalid 
 | 404 | Not Found | The API url does not point to a valid resource (Send a Get request and find no data)
 | 500 | Internal Server Error | A generic error message, given when an unexpected condition is encountered and no more specific message is suitable
 
