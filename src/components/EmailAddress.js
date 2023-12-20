@@ -2,7 +2,7 @@ import React from "react";
 
 function EmailAddress({ value, onChange }) {
   return (
-    <>
+    <div>
       <label>
         Email Address:
         <input
@@ -13,7 +13,7 @@ function EmailAddress({ value, onChange }) {
           data-testid="email-address-input"
         />
       </label>
-    </>
+    </div>
   );
 }
 

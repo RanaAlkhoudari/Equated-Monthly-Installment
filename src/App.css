@@ -1,51 +1,55 @@
-ul {
+nav ul,
+.footer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   justify-content: space-around;
   list-style: none;
   flex-wrap: wrap;
   margin-top: 50px;
 }
 
-ul img {
+img {
   width: 100px;
 }
 
-ul li {
+nav li,
+.footer {
   cursor: pointer;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
   margin: 30px;
 }
 
-.form label {
-  padding: 10px;
-  font-size: 20px;
+.form div {
+  display: flex;
+  justify-content: center;
 }
 
-.form label input {
+.form label {
   margin: 10px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .form input {
   width: 250px;
-  height: 40px;
+  height: 35px;
   border-radius: 10px;
   font-size: 20px;
   padding: 0px 10px;
+  margin: 5px 0px;
+  display: block;
+  text-align: center;
 }
 
 .form button {
   font-size: 20px;
-  margin: 40px 10px;
+  margin: 30px 10px;
   padding: 10px;
   cursor: pointer;
-  width: 250px;
-  height: 50px;
+  width: 280px;
+  height: 47px;
   border-radius: 10px;
   background-color: rgb(78, 78, 247);
 }

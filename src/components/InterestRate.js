@@ -2,7 +2,7 @@ import React from "react";
 
 function InterestRate({ value, onChange }) {
   return (
-    <>
+    <div>
       <label>
         Yearly Interest rate:
         <input
@@ -15,7 +15,7 @@ function InterestRate({ value, onChange }) {
           data-testid="interest-rate-input"
         />
       </label>
-    </>
+    </div>
   );
 }
 

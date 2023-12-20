@@ -99,7 +99,8 @@ describe("Validate fetch", () => {
         json: () => Promise.resolve(mockData),
       })
     );
-    const res = await fetch("http://localhost:8001/calculateEmi");
+    const port = process.env.REACT_APP_PORT;
+    const res = await fetch(`http://localhost:${port}/calculateEmi`);
     const result = await res.json();
     expect(result).toBe(mockData);
   });

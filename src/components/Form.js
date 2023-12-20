@@ -3,8 +3,8 @@ import LoanValue from "./LoanValue";
 import InterestRate from "./InterestRate";
 import LoanTerm from "./LoanTerm";
 import EmailAddress from "./EmailAddress";
-import validateInputLength from "../helper/validateInputLength";
-import isEmailValid from "../helper/isEmailValid";
+import validateInputLength from "../helpers/validateInputLength";
+import isEmailValid from "../helpers/isEmailValid";
 
 function Form() {
   const [loanValue, setLoanValue] = useState("");
@@ -51,7 +51,9 @@ function Form() {
     }
   }
 
-  const url = "http://localhost:8001/calculateEmi";
+  const port = process.env.REACT_APP_PORT;
+
+  const url = `http://localhost:${port}/calculateEmi`;
 
   async function calculateEmi() {
     try {
@@ -84,16 +86,28 @@ function Form() {
   return (
     <div className="form">
       <LoanValue value={loanValue} onChange={handleLoanValueChange} />
+
       <InterestRate value={interestRate} onChange={handleInterestRateChange} />
+
       <LoanTerm value={loanTerm} onChange={handleLoanTermChange} />
+
       <EmailAddress value={email} onChange={handleEmailAddressChange} />
-      {error && <p className="error-msg">{error}</p>}
-      <button onClick={calculateEmi}>Calculate EMI</button>
+
+      {error && (
+        <div>
+          <p className="error-msg">{error}</p>
+        </div>
+      )}
+      <div>
+        <button onClick={calculateEmi}>Calculate EMI</button>
+      </div>
       {
-        <p>
-          Equated Monthly Installment
-          <span>{emi}</span>
-        </p>
+        <div>
+          <p>
+            Equated Monthly Installment
+            <span>{emi}</span>
+          </p>
+        </div>
       }
     </div>
   );

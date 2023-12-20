@@ -2,7 +2,7 @@ import React from "react";
 
 function LoanTerm({ value, onChange }) {
   return (
-    <>
+    <div>
       <label>
         Loan Term in years:
         <input
@@ -15,7 +15,7 @@ function LoanTerm({ value, onChange }) {
           data-testid="loan-term-input"
         />
       </label>
-    </>
+    </div>
   );
 }
 

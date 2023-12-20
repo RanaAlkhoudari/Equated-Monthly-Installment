@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <ul>
+    <ul className="footer">
       <li>Conditions</li>
       <li>Privacy Statement</li>
       <li>Cookies</li>
