@@ -7,7 +7,7 @@
 function validateInputLength(e, inputValue, setError, max) {
   if (
     (!/^\d*\.?\d+$/.test(inputValue) ||
-      parseFloat(inputValue) < 0 ||
+      parseFloat(inputValue) <= 0 ||
       parseFloat(inputValue) > max) &&
     e.target.value
   ) {

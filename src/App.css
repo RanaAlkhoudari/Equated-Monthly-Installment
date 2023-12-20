@@ -19,6 +19,7 @@ nav li,
 
 .form {
   margin: 30px;
+  min-height: 30em;
 }
 
 .form div {
@@ -87,5 +88,11 @@ nav li,
   .error-msg {
     font-size: 15px;
     text-align: center;
+  }
+}
+
+@media only screen and (min-width: 780px) and (max-width: 2000px) {
+  .form {
+    min-height: 45em;
   }
 }

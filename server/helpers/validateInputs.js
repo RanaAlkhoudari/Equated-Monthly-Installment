@@ -23,7 +23,7 @@ function isValidLoanValue(value) {
  */
 function isValidInterestRate(value) {
   const floatValue = parseFloat(value);
-  return !isNaN(floatValue) && floatValue >= 0 && floatValue <= 100;
+  return !isNaN(floatValue) && floatValue > 0 && floatValue <= 100;
 }
 
 /**
