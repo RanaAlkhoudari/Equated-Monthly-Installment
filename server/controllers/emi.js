@@ -1,6 +1,6 @@
 const calculateEMI = require("../helpers/calculateEmi");
 const handleErrorMessages = require("../helpers/handleErrorMessages");
-const EmiModel = require("../models/emi");
+const EmiModel = require("../models/emiModel");
 
 /**
  * * This method uses two parameters request and response and will either return a 201, 400 or 500 status response.

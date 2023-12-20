@@ -1,7 +1,7 @@
 const app = require("../server");
 const supertest = require("supertest");
 const request = supertest(app);
-const EmiModel = require("../models/emi");
+const EmiModel = require("../models/emiModel");
 
 const body = {
   loanValue: 100,
@@ -21,7 +21,7 @@ describe("Get emi", () => {
 
   test("Should respond with a 200 status code & return emi", async () => {
     //Create emi entity first to be saved in-memory db
-    await request.post("/calculateEmi").send(body);
+    await request.post("/").send(body);
     const res = await request.get("/calculateEmi");
     expect(res.statusCode).toBe(200);
     expect(res.body[0].emi).toBe(emi);
