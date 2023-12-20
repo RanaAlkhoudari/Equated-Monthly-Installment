@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-To get started you need:
+To get started you need to:
 
 -Clone the repository
 
