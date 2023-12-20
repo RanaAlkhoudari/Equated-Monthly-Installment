@@ -1,18 +1,111 @@
 # Equated Monthly Installment
 
+## Getting Started
+
 To get started you need:
 
 Clone the repository
+
 Checkout to the master branch
+
 Install the dependencies: ```npm install```
+
 Create a .env file in the root and add the port, make sure that the variable starts with ```REACT```, an example: ```REACT_APP_PORT```
+
 Create another .env file inside the server folder and add the port like ```PORT```
+
 Run ```npm start``` to start the React application 
-Note: Make sure to update node to a ner version, preferably to 20.10.0
+
+Note: Make sure to update node to a new version, preferably to 20.10.0
+
 Change directory to server and run ```nodemon server.js``` for live server or ```node.server.js```
-To run the tests, inside server folder run ```npm test```
 
+To run the tests, inside the server folder run ```npm test```
 
+## Structure
+
+```
+.
+├── README.md
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── server
+│   ├── controllers
+│   │   └── emi.js
+│   ├── database
+│   │   └── connect.js
+│   ├── helpers
+│   │   ├── calculateEmi.js
+│   │   ├── handleErrorMessages.js
+│   │   └── validateInputs.js
+│   ├── models
+│   │   └── emi.js
+│   ├── server.js
+│   └── tests
+│       ├── apiRequests.test.js
+│       ├── calculateEmi.test.js
+│       ├── getEmi.test.js
+│       └── validateInputs.test.js
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── components
+    │   ├── EmailAddress.js
+    │   ├── Error.js
+    │   ├── Footer.js
+    │   ├── Form.js
+    │   ├── InterestRate.js
+    │   ├── LoanTerm.js
+    │   ├── LoanValue.js
+    │   └── Navbar.js
+    ├── helpers
+    │   ├── isEmailValid.js
+    │   └── validateInputLength.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── reportWebVitals.js
+    ├── setupTests.js
+    └── tests
+        └── App.test.jsx
+```
+
+## Libraries/Frameworks
+
+- nodejs: JS runtime for backend
+
+- mongoose: mongodb database library for nodejs
+
+- express: back end web application framework for Node.js
+
+- MongoMemoryServer: Spins up an actual/real MongoDB server programmatically from within nodejs
+
+- Jest: JavaScript Testing Framework
+
+  ## Api Calls
+
+| Method | Url | Info
+| --- | --- | --- |
+| POST | /calculateEmi |  Creates a new emi
+| GET | /calculateEmi |  Gets an emi
+
+#### STRUCTURE
+
+| Field | Type | Required | 
+| --- | --- | --- |  --- | 
+| loanValue | number | yes   
+| interestRate | number | yes 
+| loanTerm| number | yes 
+| email | string | yes 
+| emi | string | no 
 
 
 # Getting Started with Create React App
