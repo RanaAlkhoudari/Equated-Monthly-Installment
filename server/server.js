@@ -2,8 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const connect = require("./database/connect");
-const createEmi = require("./controllers/createEmi");
-const getEmi = require("./controllers/getEmi");
+const { createEmi, getEmi } = require("./controllers/emi");
 
 const dotenv = require("dotenv");
 dotenv.config();

@@ -3,14 +3,32 @@ const supertest = require("supertest");
 const request = supertest(app);
 const EmiModel = require("../models/emi");
 
+const body = {
+  loanValue: 100,
+  interestRate: 20,
+  loanTerm: 10,
+  email: "test@test.com",
+};
+
+const emi = "1.93";
+
+describe("Get emi", () => {
+  test("Should respond with a 404 status code & return an error message", async () => {
+    const res = await request.get("/calculateEmi");
+    expect(res.statusCode).toBe(404);
+    expect(res._body).toMatchObject({ message: "Emi not found" });
+  });
+
+  test("Should respond with a 200 status code & return emi", async () => {
+    //Create emi entity first to be saved in-memory db
+    await request.post("/calculateEmi").send(body);
+    const res = await request.get("/calculateEmi");
+    expect(res.statusCode).toBe(200);
+    expect(res.body[0].emi).toBe(emi);
+  });
+});
+
 describe("Create emi", () => {
-  const body = {
-    loanValue: 100,
-    interestRate: 20,
-    loanTerm: 10,
-    email: "rana@gmail.com",
-  };
-  const emi = "1.93";
   test("Should respond with a 201 status code & return emi and check that the data is saved", async () => {
     const res = await request.post("/calculateEmi").send(body);
     expect(res.statusCode).toBe(201);
@@ -22,12 +40,7 @@ describe("Create emi", () => {
     expect(savedEmi[0].email).toBe(body.email);
     expect(savedEmi[0].emi).toBe(emi);
   });
-  //Run this test here after sending POST request above to test that GET request return the emi
-  test("Should respond with a 200 status code & return emi", async () => {
-    const res = await request.get("/calculateEmi");
-    expect(res.statusCode).toBe(200);
-    expect(res.body[0].emi).toBe(emi);
-  });
+
   //Using invalid email address
   test("Should respond with a 400 status code & return an error message", async () => {
     const res = await request.post("/calculateEmi").send({
