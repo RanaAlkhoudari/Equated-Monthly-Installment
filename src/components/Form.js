@@ -103,7 +103,7 @@ function Form() {
       </div>
       {
         <div>
-          <p>
+          <p className="text">
             Equated Monthly Installment
             <span>{emi}</span>
           </p>
