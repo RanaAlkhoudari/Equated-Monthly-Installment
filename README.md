@@ -1,3 +1,20 @@
+# Equated Monthly Installment
+
+To get started you need:
+
+Clone the repository
+Checkout to the master branch
+Install the dependencies: ```npm install```
+Create a .env file in the root and add the port, make sure that the variable starts with ```REACT```, an example: ```REACT_APP_PORT```
+Create another .env file inside the server folder and add the port like ```PORT```
+Run ```npm start``` to start the React application 
+Note: Make sure to update node to a ner version, preferably to 20.10.0
+Change directory to server and run ```nodemon server.js``` for live server or ```node.server.js```
+To run the tests, inside server folder run ```npm test```
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
