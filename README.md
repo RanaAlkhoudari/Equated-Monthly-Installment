@@ -18,7 +18,7 @@ To get started you need to:
 
 ### Note: Make sure to update node to a new version, preferably to 20.10.0
 
--Change directory to server and run ```nodemon server.js``` for live server or ```node.server.js```
+-Change directory to server and run ```nodemon server.js``` or ```node.server.js```
 
 -To run the tests, inside the server folder run ```npm test```
 
