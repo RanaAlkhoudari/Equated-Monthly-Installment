@@ -8,7 +8,7 @@ To get started you need to:
 
 -Checkout to the master branch
 
-### Note: Make sure to upgrade node to a new version, preferably to 20.10.0
+### Note: Make sure to upgrade node to a new version, preferably to v20.10.0
 
 -Install the dependencies: ```npm install```
 
@@ -16,7 +16,7 @@ To get started you need to:
 
 -Create another .env file inside the server folder and add the same port as ```PORT```
 
--Run ```npm start``` to start the React application 
+-On the root, run ```npm start``` to start the React application 
 
 -Change directory to server and run  ```node server.js```
 
