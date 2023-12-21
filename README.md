@@ -12,9 +12,9 @@ To get started you need to:
 
 -Install the dependencies: ```npm install```
 
--Create a .env file in the root and add the port, make sure that the variable starts with ```REACT```, an example: ```REACT_APP_PORT```
+-Create a .env file in the root and add the port like ```REACT_APP_PORT```
 
--Create another .env file inside the server folder and add the port like ```PORT```
+-Create another .env file inside the server folder and add the same port like ```PORT```
 
 -Run ```npm start``` to start the React application 
 
@@ -46,12 +46,11 @@ To get started you need to:
 │   │   ├── handleErrorMessages.js
 │   │   └── validateInputs.js
 │   ├── models
-│   │   └── emi.js
+│   │   └── emiModel.js
 │   ├── server.js
 │   └── tests
 │       ├── apiRequests.test.js
 │       ├── calculateEmi.test.js
-│       ├── getEmi.test.js
 │       └── validateInputs.test.js
 └── src
     ├── App.css
@@ -116,8 +115,11 @@ To get started you need to:
 | 200 | Ok | Everything proceeded according to the specifications
 | 201 | Created | The request has been fulfilled 
 | 400 | Bad Request | Input values are invalid 
-| 404 | Not Found | The API url does not point to a valid resource (Send a Get request and find no data)
+| 404 | Not Found | The API URL does not point to a valid resource (Send a Get request and find no data)
 | 500 | Internal Server Error | A generic error message, given when an unexpected condition is encountered and no more specific message is suitable
+
+
+
 
 
 # Getting Started with Create React App
