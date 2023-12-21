@@ -14,7 +14,7 @@ To get started you need to:
 
 -Create a .env file in the root and add the port like ```REACT_APP_PORT```
 
--Create another .env file inside the server folder and add the same port like ```PORT```
+-Create another .env file inside the server folder and add the same port as ```PORT```
 
 -Run ```npm start``` to start the React application 
 
