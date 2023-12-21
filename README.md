@@ -8,7 +8,7 @@ To get started you need to:
 
 -Checkout to the master branch
 
-### Note: Make sure to upgrade node to a new version, preferably to v20.10.0
+### Note: Make sure to upgrade node to a new version, preferably to v20.10.0 or v16.15.0
 
 -Install the dependencies: ```npm install```
 
